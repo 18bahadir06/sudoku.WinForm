@@ -24,11 +24,14 @@ namespace sudokuotomasyon
 		SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-8EKVU1A\\MSSQLSERVER01;Initial Catalog=sudoku;Integrated Security=True");
 		private void button1_Click(object sender, EventArgs e)
 		{
+			
+			
 			oyun frm= new oyun();
 			string kadi = kullanici_adi.Text;
 			string sfre = sifre.Text;
 			try
 			{
+
 				string sql = "Select * From kullanici where eposta=@kadi AND sifre=@sifre";
 
 				SqlParameter prm1 = new SqlParameter("kadi", kadi.Trim());
